@@ -1,0 +1,185 @@
+/******* RESET ********/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/***** ETIQUETAS ********/
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+a:hover{
+    color:deeppink;
+}
+
+/***** KEYFRAMES ******/
+
+
+
+/******** CONTENEDORES Y LAYOUTS ********/
+
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+
+    /* FLEX */
+    display: flex;
+    flex-flow: row wrap;   /* esto es el metodo abreviado y equivalente a 'flex-direction: row; flex-wrap: wrap;'*/
+}
+
+header {
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px;
+
+    /* FLEX */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+
+}
+
+section.main {
+    background-color: aqua;
+    width: 60%;
+    padding: 20px;
+}
+
+aside {
+    background-color: red;
+    padding: 20px;
+    width: 40%;
+
+}
+
+footer {
+    background-color: greenyellow;
+    width: 100%;
+
+}
+
+
+/************** header  *******************/
+
+header #mainNav{
+    width: 50%;
+    background-color: orange;
+    /* FLEX */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+header #mainNav a{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2em;
+}
+
+/* menu de navegacion oculto a la izquierda para movil que al pulsar sobre el logo aparece por la izquierda*/
+header #sideNav{
+    display: none;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+header img{
+    width: 50px;
+    vertical-align: baseline;
+
+}
+
+header .logo{
+    color: #FFF;
+}
+
+header .logo a{
+    font-size: 2em;
+
+    position: relative;
+    bottom: 7px;
+
+    /*el efecto de las 2 lineas anteriores se puede conseguir tambien con
+        line-height: 50px;   */
+}
+
+
+
+/********** main ******************/
+
+
+
+/********* aside *****************/
+
+
+.widget {
+    padding: 10px;
+}
+
+
+.imagen {
+    width: 150px;
+    height: 100px;
+    background-color: orange;
+}
+
+
+/********* footer ***************/
+
+
+
+
+/******** MEDIAQUERY *****/
+
+  /******* MediaQuery para Mobile M 425 *******/
+
+@media only screen and (max-width:425px){
+
+    header #mainNav{
+        display: none;
+    }
+
+    header #sideNav{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    nav#sideNav{
+        font-size: 1.6em;
+        text-align: center;
+       margin-bottom: 20px;
+    }
+
+    nav#ssideNav a.closebtn{
+        position:absolute;
+        left: 80%;
+        font-size: 3em;
+        top: 0;
+    }
+
+    section.main, aside {
+        width: 100%;
+    }
+}
+
+
+
+

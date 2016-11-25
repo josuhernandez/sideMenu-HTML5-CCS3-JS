@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/maquetacion.css">
+
+    <!-- para evitar tener que meter los prefijos de acomodacion para que se vea en
+    el resto de navegadores añadimos el fichero 'prefixfree' cogido de internet-->
+    <script src="js/prefixfree.min.js"></script>
+
+
+</head>
+
+
+<body>
+
+   <div class="contenedor">
+       <header>
+           <div class="logo">
+               <img
+                    onclick="openNav()"
+                    src="http://goldenempire.ca/webimages/logo.gif"
+                    alt=""
+                    width="150px">
+               <a href="#">MI WEB</a>
+
+           </div>
+
+           <nav id="mainNav">
+               <a href="#">Enlace1</a>
+               <a href="#">Enlace2</a>
+               <a href="#">Enlace3</a>
+               <a href="#">Enlace4</a>
+           </nav>
+
+           <!--  TODO inyectar mediante JS-->
+           <!--Para el menu oculto que sale por la izda cuando sea un movil -->
+           <nav id="sideNav" class="sidenav">
+               <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+               <!--&times; = codigo unicode para simbolo '+'-->
+               <a href="#">Enlace1</a>
+               <a href="#">Enlace2</a>
+               <a href="#">Enlace3</a>
+               <a href="#">Enlace4</a>
+           </nav>
+           <!-- end: TODO inyectar mediante JS-->
+
+       </header>
+<!-- <header> -->
+
+       <section class="main">
+           <article>
+               <h2>Entrada gratis starbucks</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsam optio, similique illum dolore repellat quibusdam mollitia aliquid aut sint non delectus odio, asperiores aperiam ea suscipit impedit inventore magnam.</p>
+           </article>
+
+           <article>
+               <h2>Comida a domicilio</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsam optio, similique illum dolore repellat quibusdam mollitia aliquid aut sint non delectus odio, asperiores aperiam ea suscipit impedit inventore magnam.</p>
+           </article>
+
+
+       </section>
+<!--  <section class="main"> -->
+
+      <aside>
+          <div class="widget">
+              <div class="imagen"></div>
+          </div>
+
+          <div class="widget">
+              <div class="imagen"></div>
+          </div>
+
+      </aside>
+<!--  <aside> -->
+
+      <footer>
+          <section class="links">
+              <a href="#">Link1</a>
+              <a href="#">Link2</a>
+              <a href="#">Link3</a>
+              <a href="#">Link4</a>
+
+          </section>
+      </footer>
+<!--  <footer> -->
+   </div>
+<!--  <div class="contenedor"> -->
+
+
+   <script>
+       /* Set the width of the side navigation to 250px */
+       function openNav(){
+            console.debug('openNav');
+            document.getElementById("sideNav").style.width = "70%";
+        }
+
+
+       /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+        }
+
+   </script>
+
+
+</body>
+</html>
